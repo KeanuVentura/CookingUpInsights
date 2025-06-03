@@ -4,22 +4,20 @@
 
 The first dataset **RAW_recipes** contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
 
-| Column         | Description                                                                                                       |
-|----------------|-------------------------------------------------------------------------------------------------------------------|
-| name           | Recipe name                                                                                                       |
-| id             | Recipe ID                                                                                                         |
-| minutes        | Minutes to prepare recipe                                                                                         |
-| contributor_id | User ID who submitted this recipe                                                                                 |
-| submitted      | Date recipe was submitted                                                                                         |
-| tags           | Food.com tags for recipe                                                                                          |
-| nutrition      | Nutrition info: calories, fat, sugar, sodium, protein, sat. fat, carbs (% daily value)                           |
-| n_steps        | Number of steps in recipe                                                                                         |
-| steps          | Text for recipe steps, in order                                                                                   |
-| description    | User-provided description                                                                                         |
-| ingredients    | Text for recipe ingredients                                                                                       |
-| n_ingredients  | Number of ingredients in recipe                                                                                    |
-
-
+| Column         |Description                                                                                         |
+|----------------|----------------------------------------------------------------------------------------------------|
+| name           | Recipe name                                                                                        |
+| id             | Recipe ID                                                                                          |
+| minutes        | Minutes to prepare recipe                                                                          |
+| contributor_id | User ID who submitted this recipe                                                                  |
+| submitted      | Date recipe was submitted                                                                          |
+| tags           | Food.com tags for recipe                                                                           |
+| nutrition      | Nutrition info: calories, fat, sugar, sodium, protein, saturated fat, carbs (% daily value)        |
+| n_steps        | Number of steps in recipe                                                                          |
+| steps          | Text for recipe steps, in order                                                                    |
+| description    | User-provided description                                                                          |
+| ingredients    | Text for recipe ingredients                                                                        |
+| n_ingredients  | Number of ingredients in recipe                                                                    |
 
 The second dataset **RAW_interactions** contains 731,927 rows, indicating 731,927 reviews from users on recipes and 5 columns providing the following information:
 
@@ -80,25 +78,6 @@ The second dataset **RAW_interactions** contains 731,927 rows, indicating 731,92
 | 240-300     |              1 |              5 |             3372 |
 | 300-400     |              1 |              5 |             3913 |
 | 400-500     |              1 |              5 |             2310 |
-
-
-<div style="overflow-x: auto;">
-| time_bins   |   mean_avg_rating |   median_avg_rating |   min_avg_rating |   max_avg_rating |   count_avg_rating |
-|:------------|------------------:|--------------------:|-----------------:|-----------------:|-------------------:|
-| 0-10        |           4.71089 |             4.9     |                1 |                5 |              21011 |
-| 10-20       |           4.71461 |             4.90909 |                1 |                5 |              30721 |
-| 20-30       |           4.67489 |             4.85714 |                1 |                5 |              35736 |
-| 30-40       |           4.67723 |             4.85714 |                1 |                5 |              35190 |
-| 40-50       |           4.66288 |             4.85    |                1 |                5 |              25941 |
-| 50-60       |           4.66885 |             4.85185 |                1 |                5 |              17356 |
-| 60-90       |           4.67527 |             4.88095 |                1 |                5 |              32605 |
-| 90-120      |           4.66838 |             4.9     |                1 |                5 |               7985 |
-| 120-180     |           4.66414 |             4.875   |                1 |                5 |               7770 |
-| 180-240     |           4.66297 |             4.83333 |                1 |                5 |               4114 |
-| 240-300     |           4.58725 |             4.69231 |                1 |                5 |               3372 |
-| 300-400     |           4.5509  |             4.67742 |                1 |                5 |               3913 |
-| 400-500     |           4.57296 |             4.73333 |                1 |                5 |               2310 |
-</div>
 
 
 ## Assessment of Missingness
