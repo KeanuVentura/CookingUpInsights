@@ -1,5 +1,3 @@
-# A Data-Driven Approach to Estimating Calories in Recipes
-
 ## Introduction
 
 The first dataset **RAW_recipes** contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
