@@ -43,7 +43,7 @@ The second dataset **RAW_interactions** contains 731,927 rows, indicating 731,92
 </iframe>
 
 <iframe 
-  src="assets/your-plot-file.html" 
+  src="assets/average_recipe_rating.html" 
   width="800" 
   height="600" 
   frameborder="0">
