@@ -33,15 +33,13 @@ The second dataset **RAW_interactions** contains 731,927 rows, indicating 731,92
 
 ## Data Cleaning and Exploratory Data Analysis
 
-![Distribution of cooking time](images/distribution%20of%20cooking%20time.jpg)
+<iframe 
+  src="assets/cooking-time-distribution.html" 
+  width="800" 
+  height="600" 
+  frameborder="0">
+</iframe>
 
-![Distribution of average ratings](images/distribution%20of%20average%20ratings.jpg)
-
-![Average rating vs cooking time](images/average%20rating%20vs%20cooking%20time.jpg)
-
-![Average recipe rating by cooking time bins](images/average%20recipe%20rating%20by%20cooking%20time%20bins.jpg)
-
-![Pivot table aggregate](images/pivot%20table%20aggregate.jpg)
 
 ## Assessment of Missingness
 
