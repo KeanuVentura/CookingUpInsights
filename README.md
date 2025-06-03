@@ -1,7 +1,4 @@
----
-layout: default
-title: "A Data-Driven Approach to Estimating Calories in Recipes"
----
+# A Data-Driven Approach to Estimating Calories in Recipes"
 
 ## Introduction
 
