@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The first dataset **RAW_recipes** contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
+The first dataset **RAW_recipes.csv** contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
 
 | Column         |Description                                                                                         |
 |----------------|----------------------------------------------------------------------------------------------------|
@@ -19,7 +19,7 @@ The first dataset **RAW_recipes** contains 83,782 rows, indicating 83,782 recipe
 | ingredients    | Text for recipe ingredients                                                                        |
 | n_ingredients  | Number of ingredients in recipe                                                                    |
 
-The second dataset **RAW_interactions** contains 731,927 rows, indicating 731,927 reviews from users on recipes and 5 columns providing the following information:
+The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 731,927 reviews from users on recipes and 5 columns providing the following information:
 
 | Column     | Description            |
 |------------|------------------------|
