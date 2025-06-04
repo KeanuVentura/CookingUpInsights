@@ -125,7 +125,33 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Assessment of Missingness
 
+<iframe 
+  src="assets/top20_userid_by_rating_missingness.html" 
+  width="800" 
+  height="600" 
+  frameborder="0">
+</iframe>
 
+<iframe 
+  src="assets/minutes_by_rating_missingness.html" 
+  width="800" 
+  height="600" 
+  frameborder="0">
+</iframe>
+
+<iframe 
+  src="assets/userid_permutation_distribution.html" 
+  width="800" 
+  height="600" 
+  frameborder="0">
+</iframe>
+
+<iframe 
+  src="assets/missingness_test_minutes_histogram.html" 
+  width="800" 
+  height="600" 
+  frameborder="0">
+</iframe>
 
 ## Hypothesis Testing
 
