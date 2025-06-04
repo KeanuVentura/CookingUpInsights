@@ -29,9 +29,47 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 | rating     | Rating given           |
 | review     | Review text            |
 
+
+
+
+
+
+
 **Question**: _What is the relationship between the cooking time and average rating of recipes?_
 
 ## Data Cleaning and Exploratory Data Analysis
+
+| Column         | Description     |
+|----------------|-----------------|
+| name           | object          |
+| id             | int64           |
+| minutes        | int64           |
+| contributor_id | int64           |
+| submitted      | datetime64[ns]  |
+| tags           | object          |
+| nutrition      | object          |
+| n_steps        | int64           |
+| steps          | object          |
+| description    | object          |
+| ingredients    | object          |
+| n_ingredients  | int64           |
+| user_id        | float64         |
+| date           | datetime64[ns]  |
+| rating         | float64         |
+| review         | object          |
+| avg_rating     | float64         |
+| time_bins      | category        |
+| calories       | float64         |
+
+<div style="overflow-x: auto;">
+| name                                 |   minutes |   n_steps |   n_ingredients |   rating |   avg_rating | time_bins   |   calories |
+|:-------------------------------------|----------:|----------:|----------------:|---------:|-------------:|:------------|-----------:|
+| 1 brownies in the world    best ever |        40 |        10 |               9 |        4 |            4 | 40-50       |      138.4 |
+| 1 in canada chocolate chip cookies   |        45 |        12 |              11 |        5 |            5 | 40-50       |      595.1 |
+| 412 broccoli casserole               |        40 |         6 |               9 |        5 |            5 | 40-50       |      194.8 |
+| 412 broccoli casserole               |        40 |         6 |               9 |        5 |            5 | 40-50       |      194.8 |
+| 412 broccoli casserole               |        40 |         6 |               9 |        5 |            5 | 40-50       |      194.8 |
+</div>
 
 
 ### Univariate Analysis
