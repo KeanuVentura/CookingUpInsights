@@ -164,6 +164,18 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Hypothesis Testing
 
+
+<div style="width: 800px; height: 600px; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
+  <iframe 
+    src="assets/hypothesis_test_permutation_distribution.html" 
+    width="900" 
+    height="600" 
+    frameborder="0" 
+    style="display: inline-block; border:none; transform-origin: 0 0; transform: scale(0.68);">
+  </iframe>
+</div>
+
+
 ## Framing a Prediction Problem
 
 ## Baseline Model
@@ -171,3 +183,14 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 ## Final Model
 
 ## Fairness Analysis
+
+
+<div style="width: 800px; height: 600px; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
+  <iframe 
+    src="assets/fairness_permutation_test.html" 
+    width="900" 
+    height="600" 
+    frameborder="0" 
+    style="display: inline-block; border:none; transform-origin: 0 0; transform: scale(0.68);">
+  </iframe>
+</div>
