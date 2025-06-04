@@ -33,6 +33,9 @@ The second dataset **RAW_interactions** contains 731,927 rows, indicating 731,92
 
 ## Data Cleaning and Exploratory Data Analysis
 
+
+### Univariate Analysis
+
 <iframe 
   src="assets/cooking-time-distribution.html" 
   width="800" 
@@ -40,12 +43,16 @@ The second dataset **RAW_interactions** contains 731,927 rows, indicating 731,92
   frameborder="0">
 </iframe>
 
+### Bivariate Analysis
+
 <iframe 
   src="assets/average_recipe_rating.html" 
   width="800" 
   height="600" 
   frameborder="0">
 </iframe>
+
+### Interesting Aggregates
 
 | time_bins   | mean_avg_rating | median_avg_rating |
 |:------------|----------------:|------------------:|
