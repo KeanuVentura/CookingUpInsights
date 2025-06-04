@@ -146,7 +146,7 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
     width="900" 
     height="600" 
     frameborder="0" 
-    style="display: inline-block; border:none; transform-origin: 0 0; transform: scale(0.6);">
+    style="display: inline-block; border:none; transform-origin: 0 0; transform: scale(0.675);">
   </iframe>
 </div>
 
@@ -156,7 +156,7 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
     width="900" 
     height="600" 
     frameborder="0" 
-    style="display: inline-block; border:none; transform-origin: 0 0; transform: scale(0.6);">
+    style="display: inline-block; border:none; transform-origin: 0 0; transform: scale(0.675);">
   </iframe>
 </div>
 
