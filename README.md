@@ -140,21 +140,21 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 </iframe>
 
 
-<div style="width:700px; height:500px; overflow:auto;">
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 100%;">
   <iframe 
     src="assets/userid_permutation_distribution.html" 
-    width="700" 
-    height="500" 
-    frameborder="0">
+    width="340" 
+    height="300" 
+    frameborder="0" 
+    style="max-width: 100%; height: auto;">
   </iframe>
-</div>
 
-<div style="width:700px; height:500px; overflow:auto;">
   <iframe 
     src="assets/missingness_test_minutes_histogram.html" 
-    width="700" 
-    height="500" 
-    frameborder="0">
+    width="340" 
+    height="300" 
+    frameborder="0" 
+    style="max-width: 100%; height: auto;">
   </iframe>
 </div>
 
