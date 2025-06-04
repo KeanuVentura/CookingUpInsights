@@ -67,8 +67,6 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 | 1 brownies in the world    best ever |        40 |        10 |               9 |        4 |            4 | 40-50       |      138.4 |
 | 1 in canada chocolate chip cookies   |        45 |        12 |              11 |        5 |            5 | 40-50       |      595.1 |
 | 412 broccoli casserole               |        40 |         6 |               9 |        5 |            5 | 40-50       |      194.8 |
-| 412 broccoli casserole               |        40 |         6 |               9 |        5 |            5 | 40-50       |      194.8 |
-| 412 broccoli casserole               |        40 |         6 |               9 |        5 |            5 | 40-50       |      194.8 |
 
 
 
@@ -127,12 +125,6 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Assessment of Missingness
 
-<iframe 
-  src="assets/missingness_permutation_test_minutes_dist.html" 
-  width="800" 
-  height="600" 
-  frameborder="0">
-</iframe>
 
 
 ## Hypothesis Testing
