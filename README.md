@@ -176,6 +176,8 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Framing a Prediction Problem
 
+For my project I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated. This is a **regression problem** because the response variable(calories) is continous. The metrics I'm choosing to evalute my model are **Root Mean Squared Error (RMSE)** and **R^2**.
+
 ## Baseline Model
 
 ## Final Model
