@@ -171,14 +171,13 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes).
 
 **Null Hypothesis (H₀):**
-There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.
+There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.<br>
 **Alternative Hypothesis (H₁):**
-There is a difference in average recipe ratings between the two cooking time bins.
+There is a difference in average recipe ratings between the two cooking time bins.<br>
 **Test Statistic:**
-The difference in means of average ratings between the two cooking time bins.
+The difference in means of average ratings between the two cooking time bins.<br>
 **Significance Level:**
 5% (α = 0.05)
-
 
 <iframe 
   src="assets/hypothesis_test_permutation_distribution.html" 
@@ -187,6 +186,8 @@ The difference in means of average ratings between the two cooking time bins.
   frameborder="0">
 </iframe>
 
+**Results:**
+The observed difference in average ratings was approximately 0.124, and the resulting p-value was 0.0. Since the p-value of 0.0 is less than the significance level of 0.05, we reject the null hypothesis. This suggests there is strong evidence that recipes with short and long cooking times tend to receive different average ratings.
 
 
 
