@@ -1,7 +1,10 @@
 # A Data-Driven Approach to Estimating Calories in Recipes
 
-> “Every second counts in the kitchen.”  
-> — Carmen “Carmy” Berzatto, *The Bear*
+> “Every second counts”  
+> — *The Bear*
+
+“Every second counts”  
+— *The Bear*
 
 ## Introduction
 
