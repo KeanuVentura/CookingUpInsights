@@ -170,16 +170,15 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Hypothesis Testing
 
-To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes).
+To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes).<br>
 
-**Null Hypothesis (H₀):**
-There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.<br>
-**Alternative Hypothesis (H₁):**
-There is a difference in average recipe ratings between the two cooking time bins.<br>
-**Test Statistic:**
-The difference in means of average ratings between the two cooking time bins.<br>
-**Significance Level:**
-5% (α = 0.05)
+**Null Hypothesis (H₀):** There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.<br>
+
+**Alternative Hypothesis (H₁):** There is a difference in average recipe ratings between the two cooking time bins.<br>
+
+**Test Statistic:** The difference in means of average ratings between the two cooking time bins.<br>
+
+**Significance Level:** 5% (α = 0.05)
 
 <iframe 
   src="assets/hypothesis_test_permutation_distribution.html" 
@@ -189,7 +188,10 @@ The difference in means of average ratings between the two cooking time bins.<br
 </iframe>
 
 **Results:**
-The observed difference in average ratings was approximately 0.124, and the resulting p-value was 0.0. Since the p-value of 0.0 is less than the significance level of 0.05, we reject the null hypothesis. This suggests there is strong evidence that recipes with short and long cooking times tend to receive different average ratings.
+The observed difference in average ratings was approximately 0.124, and the resulting p-value was 0.0. 
+
+**Conclusion**
+Since the p-value of 0.0 is less than the significance level of 0.05, we reject the null hypothesis. This suggests there is strong evidence that recipes with short and long cooking times tend to receive different average ratings.
 
 
 
@@ -206,11 +208,22 @@ For my project, I plan to **predict the number of calories in a recipe** based o
 
 ## Fairness Analysis
 
+To assess fairness in my model, I compared its performance across two groups:
+
+**Group X:** Simple recipes (n_steps ≤ 9)<br>
+
+**Group Y:** Complex recipes (n_steps > 9)<br>
+
+**Evaluation metric:** Root mean squared error (RMSE)<br>
+
+**Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance.<br>
+
+**Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes.<br>
+
 <iframe 
   src="assets/fairness_permutation_test.html" 
   width="800" 
   height="600" 
   frameborder="0">
 </iframe>
-
 
