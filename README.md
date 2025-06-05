@@ -1,6 +1,13 @@
 # A Data-Driven Approach to Estimating Calories in Recipes
 
+> “Every second counts in the kitchen.”  
+> — Carmen “Carmy” Berzatto, *The Bear*
+
 ## Introduction
+
+
+
+**Question**: _What is the relationship between the cooking time and average rating of recipes?_
 
 The first dataset **RAW_recipes.csv** contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
 
@@ -34,8 +41,6 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 
 
-
-**Question**: _What is the relationship between the cooking time and average rating of recipes?_
 
 ## Data Cleaning and Exploratory Data Analysis
 
@@ -176,7 +181,7 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Framing a Prediction Problem
 
-For my project I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated. This is a **regression problem** because the response variable(calories) is continous. The metrics I'm choosing to evalute my model are **Root Mean Squared Error (RMSE)** and **R^2**.
+For my project, I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated. This is a **regression problem** because the response variable(calories) is continous. The metrics I'm choosing to evalute my model are **Root Mean Squared Error (RMSE)** and **R²**. For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features such as ***n_ingredients*** and **minutes**. 
 
 ## Baseline Model
 
