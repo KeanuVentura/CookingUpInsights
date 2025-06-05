@@ -224,8 +224,5 @@ To assess fairness in my model, I compared its performance across two groups:
   src="assets/fairness_permutation_test.html" 
   width="800" 
   height="600" 
-  frameborder="0"
-  style="margin: 0; padding: 0; display: block;">
+  frameborder="0">
 </iframe>
-
-test
