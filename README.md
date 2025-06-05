@@ -1,11 +1,12 @@
 # A Data-Driven Approach to Estimating Calories in Recipes
 
+
 ## Introduction
 
 > “Every second counts”  
 > — *The Bear*
 
-In the stressfull and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In the Apple TV series, *The Bear*, special emphasis is placed on the importance of time, not just in the kitchen, but in life. Thus, this data science project dives into two large datasets consisting of recipes and ratings posted since 2008 on Food.com to explore a central question: **What is the relationship between the cooking time and average rating of recipes?**
+In the stressfull and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In the Apple TV series, *The Bear*, special emphasis is placed on the importance of time, not just in the kitchen, but in life. Thus, this data science project dives into two large datasets consisting of recipes and ratings posted since 2008 on Food.com to answer one central question: **What is the relationship between the cooking time and average rating of recipes?**
 
 The first dataset **RAW_recipes.csv** contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
 
@@ -167,7 +168,16 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Hypothesis Testing
 
+To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes).
 
+**Null Hypothesis (H₀):**
+There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.
+**Alternative Hypothesis (H₁):**
+There is a difference in average recipe ratings between the two cooking time bins.
+**Test Statistic:**
+The difference in means of average ratings between the two cooking time bins.
+**Significance Level:**
+5% (α = 0.05)
 
 
 <iframe 
@@ -178,13 +188,14 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 </iframe>
 
 
-> “What grows together, goes together”  
-> — Tina, *The Bear*
 
 
 ## Framing a Prediction Problem
 
-For my project, I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated. This is a **regression problem** because the response variable(calories) is continous. The metrics I'm choosing to evalute my model are **Root Mean Squared Error (RMSE)** and **R²**. For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features such as ***n_ingredients*** and **minutes**. 
+> “What grows together, goes together”  
+> — Tina, *The Bear*
+
+For my project, I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated. This is a **regression problem** because the response variable(calories) is continous. The metrics I'm choosing to evalute my model are **Root Mean Squared Error** (RMSE) and **R²**. For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features such as ***n_ingredients*** and **minutes**. 
 
 ## Baseline Model
 
