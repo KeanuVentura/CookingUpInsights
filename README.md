@@ -2,7 +2,7 @@
 
 
 ## Introduction
-<br>
+
 > “Every second counts”  
 > — *The Bear*
 
