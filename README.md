@@ -8,9 +8,7 @@
 > “Every second counts”  
 > — *The Bear*
 
-In the stressfull and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In this project, I'm going to explore
-
-**Question**: _What is the relationship between the cooking time and average rating of recipes?_
+In the stressfull and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In the Apple TV series, *The Bear*, special emphasis is placed on the importance of time, not just in the kitchen, but in life. Thus, this data science project dives into two large datasets consisting of recipes and ratings posted since 2008 on food to explore the question: **What is the relationship between the cooking time and average rating of recipes?**. 
 
 The first dataset **RAW_recipes.csv** contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
 
@@ -173,6 +171,8 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 ## Hypothesis Testing
 
 
+
+
 <iframe 
   src="assets/hypothesis_test_permutation_distribution.html" 
   width="800" 
@@ -181,7 +181,9 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 </iframe>
 
 
-What grows together, goes together
+> “What grows together, goes together”  
+> — Tina, *The Bear*
+
 
 ## Framing a Prediction Problem
 
