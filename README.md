@@ -3,12 +3,12 @@
 > “Every second counts”  
 > — *The Bear*
 
-“Every second counts”  
-— *The Bear*
-
 ## Introduction
 
+> “Every second counts”  
+> — *The Bear*
 
+In the stressfull and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In this project, I'm going to explore
 
 **Question**: _What is the relationship between the cooking time and average rating of recipes?_
 
@@ -181,6 +181,7 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 </iframe>
 
 
+What grows together, goes together
 
 ## Framing a Prediction Problem
 
