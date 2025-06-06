@@ -62,9 +62,9 @@ The following data cleaning steps I took were:
 7. Filtered out recipes with more than 1000 calories
     - This removed outliers, data entry errors, or recipes with exceptionally large calorie counts. Removing them helps the analysis focus on more typical calorie ranges
 
-The final cleaned dataset **cleaned** contains 218885 rows, indicating the recipe with their respective review(s) retained after cleaning, and 19 columns providing the following information:
+The final dataset **cleaned** contains 218885 rows, indicating the recipe with their respective review(s) retained after cleaning, and 19 columns with the following data types:
 
-| Column         | Description     |
+| Column         | Data Type       |
 |----------------|-----------------|
 | name           | object          |
 | id             | int64           |
@@ -86,7 +86,7 @@ The final cleaned dataset **cleaned** contains 218885 rows, indicating the recip
 | time_bins      | category        |
 | calories       | float64         |
 
-Here are a few rows of the cleaned dataset showing columns relevant to the future analysis:
+Here are a few rows of **cleaned**, showing columns relevant to the future analysis:
 
 | name                                 |   minutes |   n_steps |   n_ingredients |   rating |   avg_rating | time_bins   |   calories |
 |:-------------------------------------|----------:|----------:|----------------:|---------:|-------------:|:------------|-----------:|
@@ -109,7 +109,7 @@ For this analysis, I analyzed the **distribution of cooking time (minutes) for t
 
 ### Bivariate Analysis
 
-For this analysis, I analyzed the **average recipe ratings across different durations**. The line graph below illustrates the average rating for each cooking time interval. The distribution shows a clear downward trend, revealing that was cooking time increases, the average ratings tends to slightly decrease. This suggests that recipes that take longer to make may not be rated as highly as those with shorter times.
+For this analysis, I analyzed the **average recipe ratings across different durations**. The line graph below illustrates the average rating for each cooking time interval. The distribution shows a clear downward trend, revealing that as cooking time increases, the average ratings tends to slightly decrease. This suggests that recipes that take longer to make may not be rated as highly as those with shorter times.
 
 <iframe 
   src="assets/average_recipe_rating.html" 
@@ -120,7 +120,7 @@ For this analysis, I analyzed the **average recipe ratings across different dura
 
 ### Interesting Aggregates
 
-To further understand the relationship between cooking time and average rating, I computed summary statistics for each time bin. Looking at the mean and median average ratings, the values remain consistently high across the bins, however, there is a noticeable **decline** once it reaches the 240-300 minute range. This suggests that once recipes exceed 240 minutes, their reviews have lower ratings. Additionally, the 0-20 minutes bins present the highest mean and median average ratings, suggesting that **people may favor quick recipes**. While every time interval contains recips rated from 1-5, it is evident that recipes with shorter cooking durations are more frequent in the dataset, indicating that fast meals are not only more loved on Food.com, but more common.
+To further understand the relationship between cooking time and average rating, I computed summary statistics for each time bin. Looking at the mean and median average ratings, the values remain consistently high across the bins, however, there is a noticeable **decline** once it reaches the 240-300 minute range. This suggests that once recipes exceed 240 minutes, their reviews have lower ratings. Additionally, the 0-20 minutes bins present the highest mean and median average ratings, suggesting that **people may favor quick recipes**. While every time interval contains recipes rated from 1-5, it is evident that recipes with shorter cooking durations are more frequent in the dataset, indicating that fast meals are not only more loved on Food.com, but more common.
 
 | time_bins   | mean_avg_rating | median_avg_rating |
 |:------------|----------------:|------------------:|
@@ -176,6 +176,8 @@ The bar chart below displays the top 20 user_id's that have the most missing rat
   frameborder="0">
 </iframe>
 
+The plot below displays the empirical distribution of the variance in missing ratings across user IDs under the null hypothesis, with the observed statistic of 0.128 clearly marked. This visualization highlights how extreme the observed value is compared to what we’d expect by random chance, providing strong evidence against the null.
+
 <div style="width: 800px; height: 600px; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
   <iframe 
     src="assets/userid_permutation_distribution.html" 
@@ -204,6 +206,8 @@ The histogram below portrays the distribution of cooking time by rating missingn
   height="600" 
   frameborder="0">
 </iframe>
+
+The plot below shows the empirical distribution of the variance in missing ratings across cooking times under the null hypothesis, with the observed statistic of 0.0131 marked. Since the observed value falls well within the simulated distribution, it supports the conclusion that the missingness of ratings is unrelated to cooking time.
 
 <div style="width: 800px; height: 600px; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
   <iframe 
