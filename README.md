@@ -45,6 +45,9 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Data Cleaning and Exploratory Data Analysis
 
+> “I need you to understand that you’re not just cleaning, you’re resetting the systems”
+> — Sydney, *The Bear*
+
 | Column         | Description     |
 |----------------|-----------------|
 | name           | object          |
@@ -131,6 +134,9 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Assessment of Missingness
 
+> “This is a system. It’s not just chaos. Every little thing matters”
+> — Carmy, *The Bear*
+
 <iframe 
   src="assets/top20_userid_by_rating_missingness.html" 
   width="800" 
@@ -170,6 +176,9 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 
 ## Hypothesis Testing
 
+> “I just thought it’d be nice… something simple, something good”
+> — Carmy, *The Bear*
+
 To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes).<br>
 
 **Null Hypothesis (H₀):** There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.<br>
@@ -197,16 +206,27 @@ Since the p-value of 0.0 is less than the significance level of 0.05, we reject 
 
 ## Framing a Prediction Problem
 
-> “What grows together, goes together”  
+> “What grows together, goes togethe”  
 > — Tina, *The Bear*
 
-For my project, I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated. This is a **regression problem** because the response variable(calories) is continous. The metrics I'm choosing to evalute my model are **Root Mean Squared Error** (RMSE) and **R²**. For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features such as ***n_ingredients*** and **minutes**. 
+For my project, I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated. This is a **regression problem** because the response variable (calories) is continous. The metrics I'm choosing to evalute my model are **Root Mean Squared Error** (RMSE) and **R²**. For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features such as ***n_ingredients*** and **minutes**. 
 
 ## Baseline Model
 
+> “Start from scratch. Make it clean. Make it simple”
+> — Marcus, *The Bear*
+
+
 ## Final Model
 
+> “This is not a sprint. It’s a marathon, and we’re learning every single day”
+> — Carmy, *The Bear*
+
+
 ## Fairness Analysis
+
+> “You don't get to decide how people feel”
+> — Sydney, *The Bear*
 
 To assess fairness in my model, I compared its performance across two groups:
 
