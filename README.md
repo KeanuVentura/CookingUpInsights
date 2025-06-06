@@ -1,4 +1,4 @@
-# A Data-Driven Approach to Estimating Calories in Recipes
+# Cooking Up Insights: How Time Affects Taste and What Predicts Calories
 
 **Author:** Keanu Ventura
 
@@ -241,8 +241,8 @@ To investigate the relationship between cooking time and recipe ratings, I perfo
   frameborder="0">
 </iframe>
 
-**Results:** The observed difference in average ratings was approximately 0.124, and the resulting p-value was 0.0.  
-**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This suggests there is strong evidence that recipes with short and long cooking times tend to receive different average ratings.
+**Results:** The observed difference in average ratings was approximately 0.124, and the resulting p-value was 0.0  
+**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This suggests there is strong evidence that recipes with short and long cooking times tend to receive different average ratings
 
 ## Framing a Prediction Problem
 
@@ -252,8 +252,10 @@ To investigate the relationship between cooking time and recipe ratings, I perfo
 For my project, I plan to **predict the number of calories in a recipe**.  
 
 **Type of problem:** Regression  
-**Response variable:** Calories (continous)  
-**Evaluation Metrics:**  Root Mean Squared Error (RMSE) and R²  
+**Response variable:** Calories (continous)
+  - I chose this response variable because calories are a universally known component of recipes and a meaningful metric in the world of cooking. Being able to estimate the amount of calories in a recipe is significant because it can provide people an approximate sense of a recipe's nutritional value. For example, maybe someone on a diet wants to monitor their calorie intake to ensure they're not consuming too much or maybe someone is a sports athlete wants to make sure they're consuming lots of calories to bulk up  
+**Evaluation Metric:** R²
+  - I chose this evaluation because R² provides a measure of how well my model explains the variance in the calories of recipes. Knowing that im trying to predict the number of calories in a recipe, using R² is an effective way to understand my models ability to capture the overall patterns and relationships between the features and the calorie values. It illustrates an understanding of how my model is able to account for the variation in calorie counts with a higher R² representing a better predictive performance. Ultimately, this evaluation metric helps me assess whether or not the calorie predictions are close to the actual calorie values across different recipes  
 **Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features known before the nutritional information is calculated such as **n_ingredients** and **minutes**  
 
 ## Baseline Model
@@ -261,11 +263,18 @@ For my project, I plan to **predict the number of calories in a recipe**.
 > “Start from scratch. Make it clean. Make it simple”  
 > — Marcus, *The Bear*
 
+For my baseline model, I built a **Linear Regression** model using two features I belieed would have the best correlation with calories: **n_ingredients** and **minutes**. I constructed a pipeline using a ColumnTransformer to pass these features directly into a LinearRegression model. After fitting the model to the cleaned dataset, I calculated the evalutation metrics RMSE and R².
+
+**Results:** The RMSE for my baseline model was approximately 206.05 and the R² was 0.0856  
+**Conclusion:** This means that my model's calorie predictions were off by around 206 calories on average. Also, my model explains around 8.56% of the variance in calorie content. The results suggest that ny baseline model does not fully capture the complexity in the data and there is much to be done to advance the model and improve its performance
+
 
 ## Final Model
 
 > “This is not a sprint. It’s a marathon, and we’re learning every single day”  
 > — Carmy, *The Bear*
+
+For my final model, 
 
 
 ## Fairness Analysis
