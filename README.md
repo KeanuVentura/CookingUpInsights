@@ -182,12 +182,9 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes).  
 
 **Null Hypothesis (H₀):** There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.  
-
 **Alternative Hypothesis (H₁):** There is a difference in average recipe ratings between the two cooking time bins.  
-
-**Test Statistic:** The difference in means of average ratings between the two cooking time bins.  
-
-**Significance Level:** 5% (α = 0.05)
+**Test Statistic:** The difference in means of average ratings between the two cooking time bins.
+**Significance Level:** 5% (α = 0.05)  
 
 <iframe 
   src="assets/hypothesis_test_permutation_distribution.html" 
@@ -230,11 +227,11 @@ For my project, I plan to **predict the number of calories in a recipe** based o
 
 To assess fairness in my model, I compared its performance across two groups:
 
-**Group X:** Simple recipes (n_steps ≤ 9)
-**Group Y:** Complex recipes (n_steps > 9)
-**Evaluation metric:** Root mean squared error (RMSE)
-**Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance.
-**Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes.
+**Group X:** Simple recipes (n_steps ≤ 9)  
+**Group Y:** Complex recipes (n_steps > 9)  
+**Evaluation metric:** Root mean squared error (RMSE)  
+**Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance.  
+**Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes.  
 
 <iframe 
   src="assets/fairness_permutation_test.html" 
