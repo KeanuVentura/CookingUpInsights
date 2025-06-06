@@ -206,7 +206,7 @@ For my project, I plan to **predict the number of calories in a recipe**.
 **Type of problem:** Regression 
 **Response variable:** Calories (continous)  
 **Evaluation Metrics:**  Root Mean Squared Error** (RMSE) and R²
-**Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features known before the nutritional information is calculated such as ***`n_ingredients`*** and **minutes**  
+**Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features known before the nutritional information is calculated such as ***<code>n_steps</code>*** and **minutes**  
 
 ## Baseline Model
 
@@ -241,5 +241,5 @@ To assess fairness in my model, I compared its performance across two groups:
 </iframe>
 
 **Results:** The RMSE for simple recipes was 198.40, while the RMSE for complex recipes was 210.37, resulting in an observed difference of 11.97. The resulting p-value was 0.0.  
-**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we reject the null hypothesis. This provides strong evidence that my model is unfair, as it performs significantly worse on complex recipes than on simple ones. In other words, the model is less accurate when predicting calorie content for recipes with larger `n_steps` values.
+**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we reject the null hypothesis. This provides strong evidence that my model is unfair, as it performs significantly worse on complex recipes than on simple ones. In other words, the model is less accurate when predicting calorie content for recipes with larger <code>n_steps</code> values.
 
