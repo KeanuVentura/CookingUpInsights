@@ -1,6 +1,6 @@
 # A Data-Driven Approach to Estimating Calories in Recipes
 
-Author: Keanu Ventura
+**Author:** Keanu Ventura
 
 ## Introduction
 
@@ -44,6 +44,13 @@ Understanding what makes a recipe have a high rating allows home cooks, foodies,
 
 > “I need you to understand that you’re not just cleaning, you’re resetting the systems”  
 > — Sydney, *The Bear*
+
+The following data cleaning steps I took were:
+
+1. Left merge the RAW_recipes and RAW_interactions datasets together
+
+2. 
+
 
 | Column         | Description     |
 |----------------|-----------------|
