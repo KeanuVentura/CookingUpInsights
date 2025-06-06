@@ -55,6 +55,14 @@ The following data cleaning steps I took were:
     - This provides an understanding of how each recipe was rated overall 
 4. Filtered out recipes with a cooking time greater than 500 minutes
     - The extreme values removed were either outliers, data entry errors, or data that would skew the analysis. Removing them made a dataset more representative of typical cooking times
+5. Binned the minutes column into time intervals and added it as a column
+    - Grouping the recipes by these time ranges makes it easier to analyze metrics across different durations
+6. Extracted the calories value from nutrition per recipe, converted it to a float, and added it as a column
+    - The nutrition column stored the different nutrition info values and so this step isolated the calories value and made it a type that can be used for analysis
+7. Filtered out recipes with more than 1000 calories
+    - This removed outliers, data entry errors, or recipes with exceptionally large calorie counts. Removing them helps the analysis focus on more typical calorie ranges
+
+The final cleaned dataset **cleaned** contains 218885 rows, indicating the recipe with their respective review(s) retained after cleaning, and 19 columns providing the following information:
 
 | Column         | Description     |
 |----------------|-----------------|
@@ -78,6 +86,7 @@ The following data cleaning steps I took were:
 | time_bins      | category        |
 | calories       | float64         |
 
+Below is a few rows of the cleaned dataset showing columns relevant to the future analysis:
 
 | name                                 |   minutes |   n_steps |   n_ingredients |   rating |   avg_rating | time_bins   |   calories |
 |:-------------------------------------|----------:|----------:|----------------:|---------:|-------------:|:------------|-----------:|
