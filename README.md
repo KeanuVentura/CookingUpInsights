@@ -194,7 +194,7 @@ The plot below displays the empirical distribution of the variance in missing ra
 Building on the previous test that proved missingness depends on user_id, I also tested whether the missingess of the ratings columns depends on the **minutes** column. I did this to prove that missingness is not related to cooking time and to reinforce that the missingness pattern is specifically tied to user behavior and not random with respect to other variables. Thus, to explore this, I performed the following permutation test:
 
 **Null Hypothesis (H₀):** The missingness of ratings does not depend on the cooking time of the recipe in minutes  
-**Alternative Hypothesis (H₁):** he missingness of ratings does depend on the cooking time of the recipe in minutes  
+**Alternative Hypothesis (H₁):** The missingness of ratings does depend on the cooking time of the recipe in minutes  
 **Test Statistic:** The variance of the proportions of missing ratings across different cooking times  
 **Significance Level:** 5% (α = 0.05)  
 
