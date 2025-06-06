@@ -230,15 +230,11 @@ For my project, I plan to **predict the number of calories in a recipe** based o
 
 To assess fairness in my model, I compared its performance across two groups:
 
-**Group X:** Simple recipes (n_steps ≤ 9)  
-
-**Group Y:** Complex recipes (n_steps > 9)  
-
-**Evaluation metric:** Root mean squared error (RMSE)  
-
-**Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance.  
-
-**Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes.  
+**Group X:** Simple recipes (n_steps ≤ 9)
+**Group Y:** Complex recipes (n_steps > 9)
+**Evaluation metric:** Root mean squared error (RMSE)
+**Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance.
+**Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes.
 
 <iframe 
   src="assets/fairness_permutation_test.html" 
