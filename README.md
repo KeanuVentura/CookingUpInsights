@@ -48,9 +48,13 @@ Understanding what makes a recipe have a high rating allows home cooks, foodies,
 The following data cleaning steps I took were:
 
 1. Left merged the RAW_recipes and RAW_interactions datasets together
-    - This step matched the unique recipes with their respective reviews
+    - This matched the unique recipes with their respective reviews
 2. In the merged dataset, filled all ratings of 0 with np.nan
-    - This step was necessary because ratings only go from 1-5 and therefore a rating of 0 indicates the reviewer did not leave a rating
+    - This was necessary because ratings only go from 1-5 and therefore a rating of 0 indicates the reviewer did not leave a rating
+3. Calculated the average rating per recipe, added it as a column
+    - This provides an understanding of how each recipe was rated overall 
+4. Filtered out recipes with a cooking time greater than 500 minutes
+    - The extreme values removed were either outliers, data entry errors, or data that would skew the analysis. Removing them made a dataset more representative of typical cooking times
 
 | Column         | Description     |
 |----------------|-----------------|
