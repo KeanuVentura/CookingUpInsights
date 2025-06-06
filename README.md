@@ -167,23 +167,14 @@ I believe that the rating column in my data set is **Not Missing At Random** (NM
 **Test Statistic:** The variance of the proportions of missing ratings across different user_IDs  
 **Significance Level:** 5% (α = 0.05)  
 
+The bar chart below displays the top 20 user_ID's that have most missing ratings, highlighting how some users consistently leave reviews on recipes without leaving a rating. The distribution supports the notion that the missingness is user-dependent.
+
 <iframe 
   src="assets/top20_userid_by_rating_missingness.html" 
   width="800" 
   height="600" 
   frameborder="0">
 </iframe>
-
-**Results:** The observed variance of the proportions of missing ratings across different user_ID's was 0.128, and the resulting p-value was 0.0  
-**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This suggests there is strong evidence that the missingness of ratings does depend on the user_ID, supporting the idea that the data is NMAR  
-
-<iframe 
-  src="assets/minutes_by_rating_missingness.html" 
-  width="800" 
-  height="600" 
-  frameborder="0">
-</iframe>
-
 
 <div style="width: 800px; height: 600px; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
   <iframe 
@@ -194,6 +185,16 @@ I believe that the rating column in my data set is **Not Missing At Random** (NM
     style="display: inline-block; border:none; transform-origin: 0 0; transform: scale(0.68);">
   </iframe>
 </div>
+
+**Results:** The observed variance of the proportions of missing ratings across different user_ID's was 0.128, and the resulting p-value was 0.0  
+**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This suggests there is strong evidence that the missingness of ratings does depend on the user_ID, supporting the idea that the data is NMAR  
+
+<iframe 
+  src="assets/minutes_by_rating_missingness.html" 
+  width="800" 
+  height="600" 
+  frameborder="0">
+</iframe>
 
 <div style="width: 800px; height: 600px; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
   <iframe 
