@@ -120,7 +120,7 @@ For this analysis, I analyzed the **average recipe ratings across different dura
 
 ### Interesting Aggregates
 
-To further understand the relationship between cooking time and average rating, I computed summary statistics for each time bin. Looking at the mean and median average ratings, the values remain consistently high across the bins, however, there is a noticeable decline once it reaches the 240-300 minute range. This suggests that once recipes exceed 240 minutes, their reviews have lower ratings. Additionally, the 0-20 minutes bins present the highest mean and median average ratings, suggesting that people may favor quick recipes. While every time interval contains recips rated from 1-5, it is evident that recipes with shorter cooking durations are more frequent in the dataset, indicating that fast meals are not only more loved on Food.com, but more common.
+To further understand the relationship between cooking time and average rating, I computed summary statistics for each time bin. Looking at the mean and median average ratings, the values remain consistently high across the bins, however, there is a noticeable **decline** once it reaches the 240-300 minute range. This suggests that once recipes exceed 240 minutes, their reviews have lower ratings. Additionally, the 0-20 minutes bins present the highest mean and median average ratings, suggesting that **people may favor quick recipes**. While every time interval contains recips rated from 1-5, it is evident that recipes with shorter cooking durations are more frequent in the dataset, indicating that fast meals are not only more loved on Food.com, but more common.
 
 | time_bins   | mean_avg_rating | median_avg_rating |
 |:------------|----------------:|------------------:|
@@ -160,12 +160,22 @@ To further understand the relationship between cooking time and average rating, 
 > “This is a system. It’s not just chaos. Every little thing matters”  
 > — Carmy, *The Bear*
 
+I believe that the rating column in my data set is **Not Missing At Random** (NMAR) because the missingness of a rating may depend on the **user_id** column. This is because certain users who leave reviews on Food.com may have a habit of consistently choosing not to leave a rating after leaving a review. Users individual behavior may be linked to the missingness and is not captured by any of the other observed variables. Thus to explore this, I performed the following permutation test: 
+
+**Null Hypothesis (H₀):** The missingness of ratings does not depend on the user_ID  
+**Alternative Hypothesis (H₁):** The missingness of ratings does depend on the user_ID  
+**Test Statistic:** The variance of the proportions of missing ratings across different user_IDs  
+**Significance Level:** 5% (α = 0.05)  
+
 <iframe 
   src="assets/top20_userid_by_rating_missingness.html" 
   width="800" 
   height="600" 
   frameborder="0">
 </iframe>
+
+**Results:** The observed variance of the proportions of missing ratings across different user_ID's was 0.128, and the resulting p-value was 0.0  
+**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This suggests there is strong evidence that the missingness of ratings does depend on the user_ID, supporting the idea that the data is NMAR  
 
 <iframe 
   src="assets/minutes_by_rating_missingness.html" 
@@ -204,7 +214,7 @@ To further understand the relationship between cooking time and average rating, 
 
 To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes)  
 
-**Null Hypothesis (H₀):** There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.  
+**Null Hypothesis (H₀):** There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times  
 **Alternative Hypothesis (H₁):** There is a difference in average recipe ratings between the two cooking time bins  
 **Test Statistic:** The difference in means of average ratings between the two cooking time bins  
 **Significance Level:** 5% (α = 0.05)  
