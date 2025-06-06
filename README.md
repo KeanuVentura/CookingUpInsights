@@ -160,14 +160,14 @@ To further understand the relationship between cooking time and average rating, 
 > “This is a system. It’s not just chaos. Every little thing matters”  
 > — Carmy, *The Bear*
 
-I believe that the rating column in my data set is **Not Missing At Random** (NMAR) because the missingness of a rating may depend on the **user_id** column. This is because certain users who leave reviews on Food.com may have a habit of consistently choosing not to leave a rating after leaving a review. Users individual behavior may be linked to the missingness and is not captured by any of the other observed variables. Thus to explore this, I performed the following permutation test: 
+I believe that the rating column in my data set is **Not Missing At Random** (NMAR) because the missingness of a rating may depend on the **user_id** column. This is because certain users who leave reviews on Food.com may have a habit of consistently choosing not to leave a rating after leaving a review. Users individual behavior may be linked to the missingness and is not captured by any of the other observed variables. Thus to explore this, I performed the following permutation test:
 
-**Null Hypothesis (H₀):** The missingness of ratings does not depend on the user_ID  
-**Alternative Hypothesis (H₁):** The missingness of ratings does depend on the user_ID  
-**Test Statistic:** The variance of the proportions of missing ratings across different user_IDs  
+**Null Hypothesis (H₀):** The missingness of ratings does not depend on the user_id  
+**Alternative Hypothesis (H₁):** The missingness of ratings does depend on the user_id  
+**Test Statistic:** The variance of the proportions of missing ratings across different user_id's  
 **Significance Level:** 5% (α = 0.05)  
 
-The bar chart below displays the top 20 user_ID's that have most missing ratings, highlighting how some users consistently leave reviews on recipes without leaving a rating. The distribution supports the notion that the missingness is user-dependent.
+The bar chart below displays the top 20 user_id's that have the most missing ratings, highlighting how some users consistently leave reviews on recipes without leaving a rating. The distribution supports the notion that the missingness is user-dependent.
 
 <iframe 
   src="assets/top20_userid_by_rating_missingness.html" 
@@ -186,8 +186,16 @@ The bar chart below displays the top 20 user_ID's that have most missing ratings
   </iframe>
 </div>
 
-**Results:** The observed variance of the proportions of missing ratings across different user_ID's was 0.128, and the resulting p-value was 0.0  
-**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This suggests there is strong evidence that the missingness of ratings does depend on the user_ID, supporting the idea that the data is NMAR  
+**Results:** The observed variance of the proportions of missing ratings across different user_id's was 0.128, and the resulting p-value was 0.0  
+**Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This suggests there is strong evidence that the missingness of ratings does depend on the user_id, supporting the idea that the data is NMAR  
+
+Building on the previous test that proved missingness depends on user_id, I also tested whether the missingess of the ratings columns depends on the **minutes** column. I did this to prove that missingness is not related to cooking time and to reinforce that the missingness pattern is specifically tied to user behavior and not random with respect to other variables. Thus, to explore this, I performed the following permutation test:
+
+**Null Hypothesis (H₀):** The missingness of ratings does not depend on the user_id  
+**Alternative Hypothesis (H₁):** The missingness of ratings does depend on the user_id  
+**Test Statistic:** The variance of the proportions of missing ratings across different user_id's  
+**Significance Level:** 5% (α = 0.05)  
+
 
 <iframe 
   src="assets/minutes_by_rating_missingness.html" 
