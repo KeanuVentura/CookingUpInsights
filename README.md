@@ -86,7 +86,7 @@ The final cleaned dataset **cleaned** contains 218885 rows, indicating the recip
 | time_bins      | category        |
 | calories       | float64         |
 
-Below is a few rows of the cleaned dataset showing columns relevant to the future analysis:
+Here are a few rows of the cleaned dataset showing columns relevant to the future analysis:
 
 | name                                 |   minutes |   n_steps |   n_ingredients |   rating |   avg_rating | time_bins   |   calories |
 |:-------------------------------------|----------:|----------:|----------------:|---------:|-------------:|:------------|-----------:|
@@ -96,7 +96,9 @@ Below is a few rows of the cleaned dataset showing columns relevant to the futur
 
 
 
-### Univariate Analysis
+### Univariate Analysis              
+
+For this analysis, I analyzed the distribution of cooking time (minutes) for the recipes. The histogram below depicts how frequently different cooking times appeared in the dataset. The distribution is skewed to the right with a long right tail. There is also a decreasing trend, indicating that as cooking time gets longer, there are less of those recipes on food.com. 
 
 <iframe 
   src="assets/cooking-time-distribution.html" 
@@ -107,6 +109,8 @@ Below is a few rows of the cleaned dataset showing columns relevant to the futur
 
 ### Bivariate Analysis
 
+For this analysis, I analyzed the average recipe ratings across different durations. The line graph below illustrates the average rating for each cooking time interval. The distribution shows a clear downward trend, revealing that was cooking time increases, the average ratings tends to slightly decrease. This suggests that recipes that take longer to make may not be rated as highly as those with shorter times.
+
 <iframe 
   src="assets/average_recipe_rating.html" 
   width="800" 
@@ -115,6 +119,8 @@ Below is a few rows of the cleaned dataset showing columns relevant to the futur
 </iframe>
 
 ### Interesting Aggregates
+
+
 
 | time_bins   | mean_avg_rating | median_avg_rating |
 |:------------|----------------:|------------------:|
