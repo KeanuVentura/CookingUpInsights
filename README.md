@@ -47,10 +47,10 @@ Understanding what makes a recipe have a high rating allows home cooks, foodies,
 
 The following data cleaning steps I took were:
 
-1. Left merge the RAW_recipes and RAW_interactions datasets together
-
-2. 
-
+1. Left merged the RAW_recipes and RAW_interactions datasets together
+    - This step matched the unique recipes with their respective reviews
+2. In the merged dataset, filled all ratings of 0 with np.nan
+    - This step was necessary because ratings only go from 1-5 and therefore a rating of 0 indicates the reviewer did not leave a rating
 
 | Column         | Description     |
 |----------------|-----------------|
