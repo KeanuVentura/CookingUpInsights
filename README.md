@@ -1,12 +1,13 @@
 # A Data-Driven Approach to Estimating Calories in Recipes
 
+Author: Keanu Ventura
 
 ## Introduction
 
 > “Every second counts”  
 > — *The Bear*
 
-In the stressfull and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In the Apple TV series, *The Bear*, special emphasis is placed on the importance of time, not just in the kitchen, but in life. Thus, this data science project dives into two large datasets consisting of recipes and ratings posted since 2008 on Food.com to answer one central question:  
+In the stressfull and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In one of my favorite TV series, *The Bear*, special emphasis is placed on the importance of time, not just in the kitchen, but in life. Inspired by this, my data science project dives into two large datasets consisting of recipes and ratings posted since 2008 on Food.com to answer one central question:  
 
  **What is the relationship between the cooking time and average rating of recipes?**
 
@@ -37,11 +38,7 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 | rating     | Rating given           |
 | review     | Review text            |
 
-
-
-
-
-
+Understanding what makes a recipe have a high rating allows home cooks, foodies, and recipe developers to make informed decisions when choosing or creating meals. By investigating the relationship between time and ratings, we can discover if there are patterns that illustrate what people value in a recipe. This project will check if people think spending more time actually leads to better quality recipes or if they just want quick and easy meals.
 
 ## Data Cleaning and Exploratory Data Analysis
 
