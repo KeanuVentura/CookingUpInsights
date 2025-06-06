@@ -179,11 +179,11 @@ The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 73
 > “I just thought it’d be nice… something simple, something good”  
 > — Carmy, *The Bear*
 
-To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes).  
+To investigate the relationship between cooking time and recipe ratings, I performed a hypothesis test comparing recipes with short cooking times (20–30 minutes) to those with long cooking times (300–400 minutes)  
 
 **Null Hypothesis (H₀):** There is no difference in average recipe ratings between recipes with short cooking times and those with long cooking times.  
-**Alternative Hypothesis (H₁):** There is a difference in average recipe ratings between the two cooking time bins.  
-**Test Statistic:** The difference in means of average ratings between the two cooking time bins.
+**Alternative Hypothesis (H₁):** There is a difference in average recipe ratings between the two cooking time bins  
+**Test Statistic:** The difference in means of average ratings between the two cooking time bins  
 **Significance Level:** 5% (α = 0.05)  
 
 <iframe 
@@ -206,11 +206,12 @@ Since the p-value of 0.0 is less than the significance level of 0.05, we reject 
 > “What grows together, goes together”  
 > — Tina, *The Bear*
 
-For my project, I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated.  
-**Type of problem:** This is a **regression** problem.  
-**Response variable:** calories (continous).  
-**Evaluation Metrics:**  Root Mean Squared Error** (RMSE) and R². 
-**Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features such as ***n_ingredients*** and **minutes**. 
+For my project, I plan to **predict the number of calories in a recipe**.  
+
+**Type of problem:** Regression 
+**Response variable:** Calories (continous)  
+**Evaluation Metrics:**  Root Mean Squared Error** (RMSE) and R²
+**Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features known before the nutritional information is calculated such as ***n_ingredients*** and **minutes**  
 
 ## Baseline Model
 
@@ -234,8 +235,8 @@ To assess fairness in my model, I compared its performance across two groups:
 **Group X:** Simple recipes (n_steps ≤ 9)  
 **Group Y:** Complex recipes (n_steps > 9)  
 **Evaluation metric:** Root mean squared error (RMSE)  
-**Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance.  
-**Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes.  
+**Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance  
+**Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes  
 
 <iframe 
   src="assets/fairness_permutation_test.html" 
