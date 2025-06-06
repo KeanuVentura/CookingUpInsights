@@ -206,7 +206,11 @@ Since the p-value of 0.0 is less than the significance level of 0.05, we reject 
 > “What grows together, goes together”  
 > — Tina, *The Bear*
 
-For my project, I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated. This is a **regression problem** because the response variable (calories) is continous. The metrics I'm choosing to evalute my model are **Root Mean Squared Error** (RMSE) and **R²**. For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features such as ***n_ingredients*** and **minutes**. 
+For my project, I plan to **predict the number of calories in a recipe** based on features known before the nutritional information is calculated.  
+**Type of problem:** This is a **regression** problem.  
+**Response variable:** calories (continous).  
+**Evaluation Metrics:**  Root Mean Squared Error** (RMSE) and R². 
+**Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features such as ***n_ingredients*** and **minutes**. 
 
 ## Baseline Model
 
