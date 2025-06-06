@@ -120,7 +120,7 @@ For this analysis, I analyzed the **average recipe ratings across different dura
 
 ### Interesting Aggregates
 
-To further my understanding of the relationship between cooking time and average rating, I computed summary statistics for each time bin. the mean and median average ratings present a consistent decline in values, however, there is a noticeable dip once it reaches the 240-300 time bin. This suggests that once recipes exceed 240 minutes, their reviews have lower ratings. Additionally, the 0-20 minutes bins present the highest mean and median average ratings, suggesting that people may favor quick recipes. While every time interval contains recips rated from 1-5, it is evident that recipes with shorter cooking durations are more frequent in the dataset, indicating that fast meals are not only more loved on Food.com, but more common.
+To further understand the relationship between cooking time and average rating, I computed summary statistics for each time bin. Looking at the mean and median average ratings, the values remain consistently high across the bins, however, there is a noticeable decline once it reaches the 240-300 minute range. This suggests that once recipes exceed 240 minutes, their reviews have lower ratings. Additionally, the 0-20 minutes bins present the highest mean and median average ratings, suggesting that people may favor quick recipes. While every time interval contains recips rated from 1-5, it is evident that recipes with shorter cooking durations are more frequent in the dataset, indicating that fast meals are not only more loved on Food.com, but more common.
 
 | time_bins   | mean_avg_rating | median_avg_rating |
 |:------------|----------------:|------------------:|
