@@ -98,7 +98,7 @@ Here are a few rows of the cleaned dataset showing columns relevant to the futur
 
 ### Univariate Analysis              
 
-For this analysis, I analyzed the distribution of cooking time (minutes) for the recipes. The histogram below depicts how frequently different cooking times appeared in the dataset. The distribution is skewed to the right with a long right tail. There is also a decreasing trend, indicating that as cooking time gets longer, there are less of those recipes on food.com. 
+For this analysis, I analyzed the **distribution of cooking time (minutes) for the recipes**. The histogram below depicts how frequently different cooking times appeared in the dataset. The distribution is skewed to the right with a long right tail. There is also a decreasing trend, indicating that as cooking time gets longer, there are less of those recipes on food.com. 
 
 <iframe 
   src="assets/cooking-time-distribution.html" 
@@ -109,7 +109,7 @@ For this analysis, I analyzed the distribution of cooking time (minutes) for the
 
 ### Bivariate Analysis
 
-For this analysis, I analyzed the average recipe ratings across different durations. The line graph below illustrates the average rating for each cooking time interval. The distribution shows a clear downward trend, revealing that was cooking time increases, the average ratings tends to slightly decrease. This suggests that recipes that take longer to make may not be rated as highly as those with shorter times.
+For this analysis, I analyzed the **average recipe ratings across different durations**. The line graph below illustrates the average rating for each cooking time interval. The distribution shows a clear downward trend, revealing that was cooking time increases, the average ratings tends to slightly decrease. This suggests that recipes that take longer to make may not be rated as highly as those with shorter times.
 
 <iframe 
   src="assets/average_recipe_rating.html" 
