@@ -191,11 +191,12 @@ The bar chart below displays the top 20 user_id's that have the most missing rat
 
 Building on the previous test that proved missingness depends on user_id, I also tested whether the missingess of the ratings columns depends on the **minutes** column. I did this to prove that missingness is not related to cooking time and to reinforce that the missingness pattern is specifically tied to user behavior and not random with respect to other variables. Thus, to explore this, I performed the following permutation test:
 
-**Null Hypothesis (H₀):** The missingness of ratings does not depend on the user_id  
-**Alternative Hypothesis (H₁):** The missingness of ratings does depend on the user_id  
-**Test Statistic:** The variance of the proportions of missing ratings across different user_id's  
+**Null Hypothesis (H₀):** The missingness of ratings does not depend on the cooking time of the recipe in minutes  
+**Alternative Hypothesis (H₁):** he missingness of ratings does depend on the cooking time of the recipe in minutes  
+**Test Statistic:** The variance of the proportions of missing ratings across different cooking times  
 **Significance Level:** 5% (α = 0.05)  
 
+The histogram below portrays the distribution of cooking time by rating missingness, highlighting that missing and non-missing rating values are similarly distributed across cooking times. This suggests that the missingness does not depend the minutes column.
 
 <iframe 
   src="assets/minutes_by_rating_missingness.html" 
@@ -214,7 +215,8 @@ Building on the previous test that proved missingness depends on user_id, I also
   </iframe>
 </div>
 
-
+**Results:** The observed variance of the proportions of missing ratings across different cooking times was 0.0131, and the resulting p-value was 0.297  
+**Conclusion:** Since the p-value of 0.297 is greater than the significance level of 0.05, we **fail to reject the null hypothesis**. This suggests there is strong evidence that the missingness of ratings does not depend on the cooking time (minutes)
 
 ## Hypothesis Testing
 
