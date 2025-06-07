@@ -296,7 +296,7 @@ To assess fairness in my model, I compared its performance across two groups:
 **Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance  
 **Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes  
 
-The histogram below displays the distrbition of RMSE differences between complex and simple recipes, with the observed difference of 11.97 marked. The observed differnce lies far outside the range of typical permutation values, indicating that there is unfairness in my model's performance across the two groups.
+The histogram below displays the distribution of RMSE differences between complex and simple recipes, with the observed difference of 11.97 marked. The observed differnce lies far outside the range of typical permutation values, indicating that there is unfairness in my model's performance across the two groups.
 
 <iframe 
   src="assets/fairness_permutation_test.html" 
@@ -305,5 +305,5 @@ The histogram below displays the distrbition of RMSE differences between complex
   frameborder="0">
 </iframe>
 
-**Results:** The RMSE for simple recipes was 198.40, while the RMSE for complex recipes was 210.37, resulting in an observed difference of 11.97. The resulting p-value was 0.0.  
+**Results:** The observed RMSE for simple recipes was 198.40, while the observed RMSE for complex recipes was 210.37, resulting in an observed difference of 11.97. The resulting p-value was 0.0.  
 **Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This provides strong evidence that my model is unfair, as it performs significantly worse on complex recipes than on simple ones. In other words, the model is less accurate when predicting calorie content for recipes with larger n_steps.
