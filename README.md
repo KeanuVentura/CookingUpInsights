@@ -1,4 +1,4 @@
-# Cooking Up Insights: How Time Affects Taste and What Predicts Calories
+# Cooking Up Insights: How Rushing Affects Rating and What Predicts Calories
 
 **Author:** Keanu Ventura
 
@@ -11,7 +11,7 @@ In the stressfull and exacting world of cooking, time, ingredients, preparation,
 
  **What is the relationship between the cooking time and average rating of recipes?**
 
-The first dataset **RAW_recipes.csv** contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
+The first dataset, **RAW_recipes.csv**, contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
 
 | Column         |Description                                                                                         |
 |----------------|----------------------------------------------------------------------------------------------------|
@@ -28,7 +28,7 @@ The first dataset **RAW_recipes.csv** contains 83,782 rows, indicating 83,782 re
 | ingredients    | Text for recipe ingredients                                                                        |
 | n_ingredients  | Number of ingredients in recipe                                                                    |
 
-The second dataset **RAW_interactions.csv** contains 731,927 rows, indicating 731,927 reviews from users on recipes and 5 columns providing the following information:
+The second dataset, **RAW_interactions.csv**, contains 731,927 rows, indicating 731,927 reviews from users on recipes and 5 columns providing the following information:
 
 | Column     | Description            |
 |------------|------------------------|
@@ -62,7 +62,7 @@ The following data cleaning steps I took were:
 7. Filtered out recipes with more than 1000 calories
     - This removed outliers, data entry errors, or recipes with exceptionally large calorie counts. Removing them helps the analysis focus on more typical calorie ranges
 
-The final dataset **cleaned** contains 218885 rows, indicating the recipe with their respective review(s) retained after cleaning, and 19 columns with the following data types:
+The final dataset, **cleaned**, contains 218885 rows, indicating the recipe with their respective review(s) retained after cleaning, and 19 columns with the following data types:
 
 | Column         | Data Type       |
 |----------------|-----------------|
@@ -98,7 +98,7 @@ Here are a few rows of **cleaned**, showing columns relevant to the future analy
 
 ### Univariate Analysis              
 
-For this analysis, I analyzed the **distribution of cooking time (minutes) for the recipes**. The histogram below depicts how frequently different cooking times appeared in the dataset. The distribution is skewed to the right with a long right tail. There is also a decreasing trend, indicating that as cooking time gets longer, there are less of those recipes on Food.com. 
+For this analysis, I analyzed the **distribution of cooking time (minutes)** for the recipes. The histogram below depicts how frequently different cooking times appeared in the dataset. The distribution is skewed to the right with a long right tail. There is also a decreasing trend, indicating that as cooking time gets longer, the amount of recipes on Food.com gets lower. 
 
 <iframe 
   src="assets/cooking-time-distribution.html" 
@@ -256,7 +256,7 @@ For my project, I plan to **predict the number of calories in a recipe**.
   - I chose this response variable because calories are a universally known component of recipes and a meaningful metric in the world of cooking. Being able to estimate the amount of calories in a recipe is significant because it can provide people an approximate sense of a recipe's nutritional value. For example, maybe someone on a diet wants to monitor their calorie intake to ensure they're not consuming too much or maybe someone is a sports athlete wants to make sure they're consuming lots of calories to bulk up  
 
 **Evaluation Metric:** R²
-  - I chose this evaluation because R² provides a measure of how well my model explains the variance in the calories of recipes. Knowing that im trying to predict the number of calories in a recipe, using R² is an effective way to understand my models ability to capture the overall patterns and relationships between the features and the calorie values. It illustrates an understanding of how my model is able to account for the variation in calorie counts with a higher R² representing a better predictive performance. Ultimately, this evaluation metric helps me assess whether or not the calorie predictions are close to the actual calorie values across different recipes  
+  - I chose this evaluation metric because R² provides a measure of how well my model explains the variance in the calories of recipes. Knowing that im trying to predict the number of calories in a recipe, using R² is an effective way to understand my models ability to capture the overall patterns and relationships between the features and the calorie values. It illustrates an understanding of how my model is able to account for the variation in calorie counts with a higher R² representing a better predictive performance. Ultimately, this evaluation metric helps me assess whether or not the calorie predictions are close to the actual calorie values across different recipes  
 
 **Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features known before the nutritional information is calculated such as **n_ingredients** and **minutes**  
 
