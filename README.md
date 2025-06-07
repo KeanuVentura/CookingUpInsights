@@ -265,7 +265,7 @@ For my project, I plan to **predict the number of calories in a recipe**.
 > “Start from scratch. Make it clean. Make it simple”  
 > — Marcus, *The Bear*
 
-For my baseline model, I built a **Linear Regression** model using two features I belieed would have the best correlation with calories: **n_ingredients** and **minutes**. I constructed a pipeline using a ColumnTransformer to pass these features directly into a LinearRegression model. After fitting the model to the cleaned dataset, I calculated the evalutation metric, R².
+For my baseline model, I built a **Linear Regression** model using two features I believed would have the best correlation with calories: **n_ingredients** and **minutes**. I constructed a pipeline using a Column Transformer to pass these features directly into a LinearRegression model. After fitting the model to the cleaned dataset, I calculated the evalutation metric, R².
 
 **Results:** The R² was 0.0856  
 **Conclusion:** This means that my model explains around 8.56% of the variance in calorie content. The result suggests that my baseline model does not fully capture the complexity in the data and there is much to be done to advance my model and improve its performance
@@ -278,7 +278,7 @@ For my baseline model, I built a **Linear Regression** model using two features 
 
 For my final model, I first added **n_steps** alongside n_ingredients and minutes to expand the list of features for feature engineering. I chose n_steps specifically because I believed that a recipe with more steps may have more calories as longer and more complex recipes often involve additional ingredients and techniques that can contribute to a higher calorie content. To better prepare the data, in my preprocessor, I used a **Standard Scaler** to scale n_ingredients and n_steps and applied a **Quantile Transformer** to minutes to normalize its distribution. Additionally, for my final model I used a **Random Forest Regressor** with **hyperparameter tuning** on tree depth and number of estimators via 5-fold cross-validation.
 
-**Results:** The best parameters found using grid search were 'regressor__max_depth': 5 and 'regressor__n_estimators': 1000. The The R² was 0.1087
+**Results:** The best parameters found using grid search were 'regressor_max_depth': 5 and 'regressor_n_estimators': 1000. The The R² was 0.1087  
 **Conclusion:** According to these results, my final model explains around 10.87% of the variance in calorie content. This suggests that compared to my baseline model, although the improvement is small, my final model shows an improved R² and explains more variance in calorie counts. Thus, taking into account n_steps, using a Random Forest, and using hyperparameter tuning added more complexity to my model, but also highlighted the difficulty of predicting a recipe's calories using the given data
 
 ## Fairness Analysis
