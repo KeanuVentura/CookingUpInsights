@@ -296,6 +296,8 @@ To assess fairness in my model, I compared its performance across two groups:
 **Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance  
 **Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes  
 
+The histogram below displays the distrbition of RMSE differences between complex and simple recipes, with the observed difference of 11.97 marked. The observed differnce lies far outside the range of typical permutation values, indicating that there is unfairness in my model's performance across the two groups.
+
 <iframe 
   src="assets/fairness_permutation_test.html" 
   width="800" 
