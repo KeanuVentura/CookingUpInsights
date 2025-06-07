@@ -302,7 +302,8 @@ The histogram below displays the distribution of RMSE differences between comple
   src="assets/fairness_permutation_test.html" 
   width="800" 
   height="600" 
-  frameborder="0">
+  frameborder="0"
+  style="display: inline-block; border:none; transform-origin: 0 0; transform: scale(0.68);">
 </iframe>
 
 **Results:** The observed RMSE for simple recipes was 197.1212, while the observed RMSE for complex recipes was 207.9062, resulting in an observed difference of 10.785. The resulting p-value was 0.0.  
