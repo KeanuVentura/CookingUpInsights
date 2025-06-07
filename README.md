@@ -176,7 +176,7 @@ The bar chart below displays the top 20 user_id's that have the most missing rat
   frameborder="0">
 </iframe>
 
-The plot below displays the empirical distribution of the variance in missing ratings across user IDs under the null hypothesis, with the observed statistic of 0.128 clearly marked. This visualization highlights how extreme the observed value is compared to what we’d expect by random chance, providing strong evidence against the null.
+The plot below displays the empirical distribution of the variance in missing ratings across user id's under the null hypothesis, with the observed statistic of 0.128 clearly marked. This visualization highlights how extreme the observed value is compared to what we’d expect by random chance, providing strong evidence against the null.
 
 <div style="width: 800px; height: 600px; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
   <iframe 
@@ -198,7 +198,7 @@ Building on the previous test that proved missingness depends on user_id, I also
 **Test Statistic:** The variance of the proportions of missing ratings across different cooking times  
 **Significance Level:** 5% (α = 0.05)  
 
-The histogram below portrays the distribution of cooking time by rating missingness, highlighting that missing and non-missing rating values are similarly distributed across cooking times. This suggests that the missingness does not depend the minutes column.
+The histogram below portrays the distribution of cooking time by rating missingness, highlighting that missing and non-missing rating values are similarly distributed across cooking times. This suggests that the missingness does not depend on the minutes column.
 
 <iframe 
   src="assets/minutes_by_rating_missingness.html" 
@@ -233,6 +233,8 @@ To investigate the relationship between cooking time and recipe ratings, I perfo
 **Alternative Hypothesis (H₁):** There is a difference in average recipe ratings between the two cooking time bins  
 **Test Statistic:** The difference in means of average ratings between the two cooking time bins  
 **Significance Level:** 5% (α = 0.05)  
+
+The histogram below shows the distribution of differences in average ratings between the 20–30 minute and 300–400 minute cooking time bins, with the observed statistic of 0.124 marked. The observed difference lies far outside the permuted differences, providing strong evidence against the null hypothesis.
 
 <iframe 
   src="assets/hypothesis_test_permutation_distribution.html" 
