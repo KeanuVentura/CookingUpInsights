@@ -7,11 +7,11 @@
 > “Every second counts”  
 > — *The Bear*
 
-In the stressfull and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In one of my favorite TV series, *The Bear*, special emphasis is placed on the importance of time, not just in the kitchen, but in life. Inspired by this, my data science project dives into two large datasets consisting of recipes and ratings posted since 2008 on Food.com to answer one central question:  
+In the stressful and exacting world of cooking, time, ingredients, preparation, and other factors all play a crucial role in determining the outcome of a dish. In one of my favorite TV series, *The Bear*, special emphasis is placed on the importance of time, not just in the kitchen, but in life as well. Inspired by this, my data science project dives into two large datasets consisting of recipes and ratings posted since 2008 on Food.com to answer one central question:  
 
- **What is the relationship between the cooking time and average rating of recipes?**
+ **What is the relationship between the cooking time and the average rating of recipes?**
 
-The first dataset, **RAW_recipes.csv**, contains 83,782 rows, indicating 83,782 recipes and 12 columns providing the following information:
+The first dataset, **RAW_recipes.csv**, contains 83,782 rows, indicating 83,782 recipes, and 12 columns providing the following information:
 
 | Column         |Description                                                                                         |
 |----------------|----------------------------------------------------------------------------------------------------|
@@ -28,7 +28,7 @@ The first dataset, **RAW_recipes.csv**, contains 83,782 rows, indicating 83,782 
 | ingredients    | Text for recipe ingredients                                                                        |
 | n_ingredients  | Number of ingredients in recipe                                                                    |
 
-The second dataset, **RAW_interactions.csv**, contains 731,927 rows, indicating 731,927 reviews from users on recipes and 5 columns providing the following information:
+The second dataset, **RAW_interactions.csv**, contains 731,927 rows, indicating 731,927 reviews from users on recipes, and 5 columns providing the following information:
 
 | Column     | Description            |
 |------------|------------------------|
@@ -38,7 +38,7 @@ The second dataset, **RAW_interactions.csv**, contains 731,927 rows, indicating 
 | rating     | Rating given           |
 | review     | Review text            |
 
-Understanding what makes a recipe have a high rating allows home cooks, foodies, and recipe developers to make informed decisions when choosing or creating meals. By investigating the relationship between time and ratings, we can discover if there are patterns that illustrate what people value in a recipe. This project will check if people think spending more time actually leads to better quality recipes or if they just want quick and easy meals.
+Understanding what makes a recipe have highly rated enables home cooks, food enthusiasts, and recipe developers to make informed decisions when selecting or creating meals. By investigating the relationship between time and ratings, we can discover if there are patterns that illustrate what people value in a recipe. This project will check if people think spending more time leads to better quality recipes or if they just want quick and easy meals.
 
 ## Data Cleaning and Exploratory Data Analysis
 
@@ -109,7 +109,7 @@ For this analysis, I analyzed the **distribution of cooking time (minutes)** for
 
 ### Bivariate Analysis
 
-For this analysis, I analyzed the **average recipe ratings across different durations**. The line graph below illustrates the average rating for each cooking time interval. The distribution shows a clear downward trend, revealing that as cooking time increases, the average ratings tends to slightly decrease. This suggests that recipes that take longer to make may not be rated as highly as those with shorter times.
+For this analysis, I analyzed the **average recipe ratings across different durations**. The line graph below illustrates the average rating for each cooking time interval. The distribution shows a clear downward trend, revealing that as cooking time increases, the average ratings tend to slightly decrease. This suggests that recipes that take longer to make may not be rated as highly as those with shorter times.
 
 <iframe 
   src="assets/average_recipe_rating.html" 
@@ -160,7 +160,7 @@ To further understand the relationship between cooking time and average rating, 
 > “This is a system. It’s not just chaos. Every little thing matters”  
 > — Carmy, *The Bear*
 
-I believe that the rating column in my data set is **Not Missing At Random** (NMAR) because the missingness of a rating may depend on the **user_id** column. This is because certain users who leave reviews on Food.com may have a habit of consistently choosing not to leave a rating after leaving a review. Users individual behavior may be linked to the missingness and is not captured by any of the other observed variables. Thus to explore this, I performed the following permutation test:
+I believe that the rating column in my data set is **Not Missing At Random** (NMAR) because the missingness of a rating may depend on the **user_id** column. This is because certain users who leave reviews on Food.com may have a habit of consistently choosing not to leave a rating after leaving a review. Users' individual behavior may be linked to the missingness and is not captured by any of the other observed variables. Thus to explore this, I performed the following permutation test:
 
 **Null Hypothesis (H₀):** The missingness of ratings does not depend on the user_id  
 **Alternative Hypothesis (H₁):** The missingness of ratings does depend on the user_id  
@@ -176,7 +176,7 @@ The bar chart below displays the top 20 user_id's that have the most missing rat
   frameborder="0">
 </iframe>
 
-The plot below displays the empirical distribution of the variance in missing ratings across user id's under the null hypothesis, with the observed statistic of 0.128 clearly marked. This visualization highlights how extreme the observed value is compared to what we’d expect by random chance, providing strong evidence against the null.
+The plot below displays the empirical distribution of the variance in missing ratings across user id's under the null hypothesis, with the observed statistic of 0.128 marked. This visualization highlights how extreme the observed value is compared to what we’d expect by random chance, providing strong evidence against the null.
 
 <div style="width: 800px; height: 600px; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
   <iframe 
@@ -191,7 +191,7 @@ The plot below displays the empirical distribution of the variance in missing ra
 **Results:** The observed variance of the proportions of missing ratings across different user_id's was 0.128, and the resulting p-value was 0.0  
 **Conclusion:** Since the p-value of 0.0 is less than the significance level of 0.05, we **reject the null hypothesis**. This suggests there is strong evidence that the missingness of ratings does depend on the user_id, supporting the idea that the data is NMAR  
 
-Building on the previous test that proved missingness depends on user_id, I also tested whether the missingess of the ratings columns depends on the **minutes** column. I did this to prove that missingness is not related to cooking time and to reinforce that the missingness pattern is specifically tied to user behavior and not random with respect to other variables. Thus, to explore this, I performed the following permutation test:
+Building on the previous test that proved missingness depends on user_id, I also tested whether the missingness of the rating columns depends on the **minutes** column. I did this to prove that missingness is not related to cooking time and to reinforce that the missingness pattern is specifically tied to user behavior and not random concerning other variables. Thus, to explore this, I performed the following permutation test:
 
 **Null Hypothesis (H₀):** The missingness of ratings does not depend on the cooking time of the recipe in minutes  
 **Alternative Hypothesis (H₁):** The missingness of ratings does depend on the cooking time of the recipe in minutes  
@@ -254,20 +254,20 @@ The histogram below shows the distribution of differences in average ratings bet
 For my project, I plan to **predict the number of calories in a recipe**.  
 
 **Type of problem:** Regression  
-**Response variable:** Calories (continous)
-  - I chose this response variable because calories are a universally known component of recipes and a meaningful metric in the world of cooking. Being able to estimate the amount of calories in a recipe is significant because it can provide people an approximate sense of a recipe's nutritional value. For example, maybe someone on a diet wants to monitor their calorie intake to ensure they're not consuming too much or maybe someone is a sports athlete who wants to make sure they're consuming enough calories to bulk up  
+**Response variable:** Calories (continuous)
+  - I chose this response variable because calories are a universally known component of recipes and a meaningful metric in the world of cooking. Being able to estimate the amount of calories in a recipe is significant because it can provide people with an approximate sense of a recipe's nutritional value. For example, maybe someone on a diet wants to monitor their calorie intake to ensure they're not consuming too much, or maybe someone is a sports athlete who wants to make sure they're consuming enough calories to bulk up  
 
 **Evaluation Metric:** R²
-  - I chose this evaluation metric because R² provides a measure of how well my model explains the variance in the calories of recipes. Knowing that im trying to predict the number of calories in a recipe, using R² is an effective way to understand my models ability to capture the overall patterns and relationships between the features and the calorie values. It illustrates an understanding of how my model is able to account for the variation in calorie counts, with a higher R² representing a better predictive performance. Ultimately, this evaluation metric helps me assess whether or not the calorie predictions are close to the actual calorie values across different recipes  
+  - I chose this evaluation metric because R² provides a measure of how well my model explains the variance in the calories of recipes. Knowing that I'm trying to predict the number of calories in a recipe, using R² is an effective way to understand my model's ability to capture the overall patterns and relationships between the features and the calorie values. It illustrates an understanding of how my model is able to account for the variation in calorie counts, with a higher R² representing a better predictive performance. Ultimately, this evaluation metric helps me assess whether or not the calorie predictions are close to the actual calorie values across different recipes  
 
-**Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features known before the nutritional information is calculated such as **n_ingredients** and **minutes**  
+**Time of prediction information:** For the features I would know at the time of prediction, I decided to stray away from features like the full nutrition breakdown (e.g., fat, sugar) as they would only be known after calories are already calculated. Thus, I selected features known before the nutritional information was calculated such as **n_ingredients** and **minutes**  
 
 ## Baseline Model
 
 > “Start from scratch. Make it clean. Make it simple”  
 > — Marcus, *The Bear*
 
-For my baseline model, I built a **Linear Regression** model using two features I believed would have the best correlation with calories: **n_ingredients** and **minutes**. I inferred that the more ingredients in a recipe and the longer it takes to cook a recipe, the more calories it may contain. Additionally, for my model I constructed a pipeline using a Column Transformer to pass these features directly into the Linear Regression model. After fitting the model to the cleaned dataset, I calculated the evalutation metric, R².
+For my baseline model, I built a **Linear Regression** model using two features I believed would have the best correlation with calories: **n_ingredients** and **minutes**. I inferred that the more ingredients in a recipe and the longer it takes to cook a recipe, the more calories it may contain. Additionally, for my model, I constructed a pipeline using a Column Transformer to pass these features directly into the Linear Regression model. After fitting the model to the cleaned dataset, I calculated the evaluation metric, R².
 
 **Results:** The R² was 0.0856  
 **Conclusion:** This means that my model explains around 8.56% of the variance in calorie content. The result suggests that my baseline model does not fully capture the complexity in the data and there is much to be done to advance my model and improve its performance
@@ -278,10 +278,10 @@ For my baseline model, I built a **Linear Regression** model using two features 
 > “This is not a sprint. It’s a marathon, and we’re learning every single day”  
 > — Carmy, *The Bear*
 
-For my final model, I first added **n_steps** alongside n_ingredients and minutes to expand the list of features for feature engineering. I chose n_steps specifically because I believed that a recipe with more steps may have more calories as longer and more complex recipes often involve additional ingredients and techniques that can contribute to a higher calorie content. To better prepare the data, in my preprocessor, I used a **Standard Scaler** to scale n_ingredients and n_steps and applied a **Quantile Transformer** to minutes to normalize its distribution. Additionally, for my final model I used a **Random Forest Regressor** with **hyperparameter tuning** on tree depth and number of estimators via 5-fold cross-validation.
+For my final model, I first added **n_steps** alongside n_ingredients and minutes to expand the list of features for feature engineering. I chose n_steps specifically because I believed that a recipe with more steps may have more calories as longer and more complex recipes often involve additional ingredients and techniques that can contribute to a higher calorie content. To better prepare the data, in my preprocessor, I used a **Standard Scaler** to scale n_ingredients and n_steps and applied a **Quantile Transformer** to minutes to normalize its distribution. Additionally, for my final model, I used a **Random Forest Regressor** with **hyperparameter tuning** on tree depth and number of estimators via 5-fold cross-validation.
 
 **Results:** The best parameters found using grid search were 'regressor_max_depth': 5 and 'regressor_n_estimators': 1000. The R² was 0.1087  
-**Conclusion:** According to these results, my final model explains around 10.87% of the variance in calorie content. This suggests that compared to my baseline model, although the improvement is small, my final model shows an improved R² and explains more variance in calorie counts. Thus, taking into account n_steps, better preparing the data, using a Random Forest, and using hyperparameter tuning added more complexity to my model. However, my final outcome highlights the difficulty of predicting a recipe's calories using the given data
+**Conclusion:** According to these results, my final model explains around 10.87% of the variance in calorie content. This suggests that compared to my baseline model, although the improvement is small, my final model shows an improved R² and explains more variance in calorie counts. Thus, taking into account n_steps, better preparing the data, using a Random Forest, and using hyperparameter tuning added more complexity to my model. However, my outcome highlights the difficulty of predicting a recipe's calories using the given data
 
 ## Fairness Analysis
 
@@ -296,7 +296,7 @@ To assess fairness in my model, I compared its performance across two groups:
 **Null Hypothesis (H₀):** My model is fair. Its RMSE for simple and complex recipes is roughly the same, and any differences are due to random chance  
 **Alternative Hypothesis (H₁):** My model is unfair. Its RMSE for simple recipes is lower than that for complex recipes  
 
-The histogram below displays the distribution of RMSE differences between complex and simple recipes, with the observed difference of 11.97 marked. The observed differnce lies far outside the range of typical permutation values, indicating that there is unfairness in my model's performance across the two groups.
+The histogram below displays the distribution of RMSE differences between complex and simple recipes, with the observed difference of 11.97 marked. The observed difference lies far outside the range of typical permutation values, indicating that there is unfairness in my model's performance across the two groups.
 
 <iframe 
   src="assets/fairness_permutation_test.html" 
